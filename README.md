@@ -9,6 +9,8 @@ Deploy to [q-lako](https://q-lako.appspot.com)
   - [Requirements](#requirements)
   - [How to Run](#how-to-run)
     - [Create Virtual Environment for Python](#create-virtual-environment-for-python)
+      - [python](#python)
+      - [Node](#node)
     - [Create Virtual Environment for Vue](#create-virtual-environment-for-vue)
     - [Run](#run)
     - [Lint](#lint)
@@ -23,9 +25,9 @@ Deploy to [q-lako](https://q-lako.appspot.com)
   - [pytest](https://docs.pytest.org/en/stable/)
     - [pytest-cov](https://pypi.org/project/pytest-cov/)
   - [flake8](https://pypi.org/project/flake8/)
-  - [Google Cloud SDK](https://cloud.google.com/sdk/)(If you want to deploy to GAE in a local environment.)
   - [Flask](http://flask.pocoo.org/)
-- Node.js
+- Node v13.8.0 or higher
+  - [Node.js](https://nodejs.org/en/)
   - [npm](https://www.npmjs.com)
   - [Vue.js](https://jp.vuejs.org/index.html)
 
@@ -35,9 +37,17 @@ In your local environment, follow the steps below to set up your environment.
 
 ### Create Virtual Environment for Python
 
+#### python
+
 ```shell
 python3 -m venv venv
 source venv/bin/activate
+```
+
+#### Node
+
+```shell
+npm install vue
 ```
 
 ### Create Virtual Environment for Vue

@@ -3,3 +3,4 @@ hacking
 pytest
 pytest-cov
 Flask
+flask-restful

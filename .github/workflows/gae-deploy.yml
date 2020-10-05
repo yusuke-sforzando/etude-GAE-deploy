@@ -29,6 +29,6 @@ jobs:
 
       # I'm currently experimenting, so I'm temporarily commenting out.
       # Deploy App to App Engine
-      # - name: Deploy
-      #  run: |
-      #    gcloud app deploy --quiet
+      - name: Deploy
+        run: |
+          gcloud app deploy --quiet
