@@ -22,8 +22,4 @@ jobs:
         run: |
           pytest -vv --durations=0 --cov . --cov-branch --ignore-glob="venv/**/*" --cov-report=xml
           bash <(curl -s https://codecov.io/bash)
-      - uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          file: ~/coverage/lcov.info
-          fail_ci_if_error: true
+
