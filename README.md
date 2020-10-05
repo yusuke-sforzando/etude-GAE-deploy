@@ -1,10 +1,9 @@
 # etude-GAE
 
-Practice for automatic GAE deployments on GitHub Actions.  
-Deploy to [q-lako](https://q-lako.appspot.com)
-
 ![Deploy to Google App Engine](https://github.com/yusuke-sforzando/etude-GAE-deploy/workflows/Deploy%20to%20Google%20App%20Engine/badge.svg)
 ![Python application](https://github.com/yusuke-sforzando/etude-GAE-deploy/workflows/Python%20application/badge.svg)
+Practice for automatic GAE deployments on GitHub Actions.  
+Deploy to [q-lako](https://q-lako.appspot.com)
 
 - [etude-GAE](#etude-gae)
   - [Requirements](#requirements)
@@ -13,12 +12,11 @@ Deploy to [q-lako](https://q-lako.appspot.com)
     - [Run](#run)
     - [Lint](#lint)
     - [Test](#test)
-    - [Google Cloud SDK for GAE/Python](#google-cloud-sdk-for-gaepython)
-      - [Case of MacOS w/ Homebrew](#case-of-macos-w-homebrew)
-      - [Case of others](#case-of-others)
     - [Install Python Packages](#install-python-packages)
     - [Install Node.js Packages](#install-nodejs-packages)
-  - [How to Develop](#how-to-develop)
+    - [Google Cloud SDK for GAE/Python (If you want to deploy to GAE in a local environment.)](#google-cloud-sdk-for-gaepython-if-you-want-to-deploy-to-gae-in-a-local-environment)
+      - [Case of MacOS w/ Homebrew](#case-of-macos-w-homebrew)
+      - [Case of others](#case-of-others)
 
 ## Requirements
 
@@ -26,8 +24,7 @@ Deploy to [q-lako](https://q-lako.appspot.com)
   - [pytest](https://docs.pytest.org/en/stable/)
     - [pytest-cov](https://pypi.org/project/pytest-cov/)
   - [flake8](https://pypi.org/project/flake8/)
-  - [tqdm](https://github.com/tqdm/tqdm)
-  - [Google Cloud SDK](https://cloud.google.com/sdk/)
+  - [Google Cloud SDK](https://cloud.google.com/sdk/)(If you want to deploy to GAE in a local environment.)
   - [Flask](http://flask.pocoo.org/)
 - Node.js
   - [npm](https://www.npmjs.com)
@@ -69,7 +66,21 @@ In addition, measure the coverage of the test code.
 python -m pytest -vv . --capture=no --cov --cov-report=xml
 ```
 
-### Google Cloud SDK for GAE/Python
+### Install Python Packages
+
+Upgrade the python module.
+
+```shell
+pip install -t lib -r python-requirements.txt --upgrade
+```
+
+### Install Node.js Packages
+
+```shell
+npm install
+```
+
+### Google Cloud SDK for GAE/Python (If you want to deploy to GAE in a local environment.)
 
 #### Case of MacOS w/ Homebrew
 
@@ -81,19 +92,3 @@ gcloud components install app-engine-python
 #### Case of others
 
 Download SDK from [official site](https://cloud.google.com/sdk/) and install it.
-
-### Install Python Packages
-
-Upgrade the python module.
-
-```shell
-pip install -t lib -r requirements.txt --upgrade
-```
-
-### Install Node.js Packages
-
-```shell
-yarn install
-```
-
-## How to Develop
