@@ -1,7 +1,7 @@
 # etude-GAE
 
 ![Deploy to Google App Engine](https://github.com/yusuke-sforzando/etude-GAE-deploy/workflows/Deploy%20to%20Google%20App%20Engine/badge.svg)
-![Python application](https://github.com/yusuke-sforzando/etude-GAE-deploy/workflows/Python%20application/badge.svg)
+![Python application](https://github.com/yusuke-sforzando/etude-GAE-deploy/workflows/Python%20application/badge.svg)  
 Practice for automatic GAE deployments on GitHub Actions.  
 Deploy to [q-lako](https://q-lako.appspot.com)
 
