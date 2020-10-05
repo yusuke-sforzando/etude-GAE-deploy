@@ -1,0 +1,5 @@
+flake8
+hacking
+pytest
+pytest-cov
+Flask

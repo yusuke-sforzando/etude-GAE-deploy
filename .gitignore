@@ -128,6 +128,10 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
+### Python ###
+__pycache__
+.pytest_cache
+
 ### OSX ###
 # General
 .DS_Store
@@ -169,6 +173,10 @@ Temporary Items
 pyvenv.cfg
 .venv
 pip-selfcheck.json
+venv
+venv/
+.venv
+.venv/
 
 ### vscode ###
 .vscode/*
