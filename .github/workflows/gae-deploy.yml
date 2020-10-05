@@ -27,7 +27,8 @@ jobs:
           project_id: ${{ secrets.PROJECT_ID }}
           service_account_key: ${{ secrets.GAE_SECRET_KEY}}
 
+      # I'm currently experimenting, so I'm temporarily commenting out.
       # Deploy App to App Engine
-      - name: Deploy
-        run: |
-          gcloud app deploy --quiet
+      # - name: Deploy
+      #  run: |
+      #    gcloud app deploy --quiet
