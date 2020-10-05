@@ -1,0 +1,33 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Deploy to Google App Engine
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the main branch
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  setup-build-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Setup and configure gcloud CLI
+      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        with:
+          version: '290.0.1'
+          project_id: ${{ secrets.PROJECT_ID }}
+          service_account_key: ${{ secrets.GAE_SECRET_KEY}}
+
+      # Deploy App to App Engine
+      - name: Deploy
+        run: |
+          gcloud app deploy --quiet
