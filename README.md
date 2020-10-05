@@ -8,15 +8,14 @@ Deploy to [q-lako](https://q-lako.appspot.com)
 - [etude-GAE](#etude-gae)
   - [Requirements](#requirements)
   - [How to Run](#how-to-run)
-    - [Create Virtual Environment](#create-virtual-environment)
+    - [Create Virtual Environment for Python](#create-virtual-environment-for-python)
+    - [Create Virtual Environment for Vue](#create-virtual-environment-for-vue)
     - [Run](#run)
     - [Lint](#lint)
     - [Test](#test)
     - [Install Python Packages](#install-python-packages)
     - [Install Node.js Packages](#install-nodejs-packages)
-    - [Google Cloud SDK for GAE/Python (If you want to deploy to GAE in a local environment.)](#google-cloud-sdk-for-gaepython-if-you-want-to-deploy-to-gae-in-a-local-environment)
-      - [Case of MacOS w/ Homebrew](#case-of-macos-w-homebrew)
-      - [Case of others](#case-of-others)
+    - [Miscellaneous](#miscellaneous)
 
 ## Requirements
 
@@ -34,11 +33,20 @@ Deploy to [q-lako](https://q-lako.appspot.com)
 
 In your local environment, follow the steps below to set up your environment.
 
-### Create Virtual Environment
+### Create Virtual Environment for Python
 
 ```shell
 python3 -m venv venv
 source venv/bin/activate
+```
+
+### Create Virtual Environment for Vue
+
+If you don't have node.js in your environment.
+
+```shell
+brew install nodebrew
+npm install vue
 ```
 
 ### Run
@@ -80,15 +88,6 @@ pip install -t lib -r python-requirements.txt --upgrade
 npm install
 ```
 
-### Google Cloud SDK for GAE/Python (If you want to deploy to GAE in a local environment.)
+### Miscellaneous
 
-#### Case of MacOS w/ Homebrew
-
-```shell
-brew cask install google-cloud-sdk
-gcloud components install app-engine-python
-```
-
-#### Case of others
-
-Download SDK from [official site](https://cloud.google.com/sdk/) and install it.
+- [何でHomebrewからじゃなくNodebrewでNode.jsのバージョン管理するのか](https://ocws.jp/blog/why-do-you-version-node-js-in-a-nodebrew-not-from-homebrew/)
